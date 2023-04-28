@@ -172,7 +172,7 @@ h1 {
   overflow: hidden;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
   display: inline-flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 .btn span {
@@ -182,6 +182,8 @@ h1 {
 .btn .icon {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 0.5rem 1rem;
+  display: grid;
+  place-items: center;
 }
 
 .btn::before {
@@ -304,15 +306,23 @@ footer {
   font-size: 1rem;
 }
 
-footer a {
-  color: var(--clr-primary);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-bottom: 0.5rem;
+.links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-footer a:hover {
+.links a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  display: inline-block;
+  padding-block: 0.4rem;
+}
+
+.links i {
+  margin-right: 0.3rem;
+}
+
+.links a:hover {
   color: white;
 }
