@@ -232,6 +232,7 @@ h1 {
   height: 120%;
   bottom: 0;
   overflow: hidden;
+  clip-path: content-box;
 }
 
 .profile-img-container img {
