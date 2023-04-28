@@ -55,8 +55,13 @@ header a {
   font-size: 1rem;
 }
 
-header a:hover {
+header a:hover, header a:focus-visible {
   color: var(--clr-highlight);
+  outline: none;
+}
+
+header .tel {
+  display: none;
 }
 
 .logo {
@@ -119,12 +124,16 @@ h1 {
   padding-top: 5rem;
   padding-bottom: 1rem;
   background-color: var(--clr-background);
+  text-align: center;
 }
 
 .hero .cols {
   display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
   gap: 1rem;
-  justify-content: space-between;
+  row-gap: 2rem;
 }
 
 .hero .cols > * {
@@ -132,6 +141,7 @@ h1 {
 }
 
 .hero .cols .profile-container {
+  min-width: 200px;
   max-width: 300px;
 }
 
@@ -255,10 +265,12 @@ h1 {
 
 .skills ul {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   justify-content: center;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1rem;
+  row-gap: 1rem;
 }
 
 .skills li {
@@ -303,6 +315,7 @@ h1 {
 
 footer {
   margin-top: 1rem;
+  margin-bottom: 2rem;
   color: var(--clr-primary);
   font-size: 1rem;
 }
@@ -324,6 +337,22 @@ footer {
   margin-right: 0.3rem;
 }
 
-.links a:hover {
+.links a:hover, .links a:focus-visible {
   color: white;
+  outline: none;
+}
+
+
+@media (min-width: 700px) {
+  header .tel {
+    display: block;
+  }
+
+  .hero {
+    text-align: left;
+  }
+
+  .hero .cols {
+    flex-direction: row;
+  }
 }
